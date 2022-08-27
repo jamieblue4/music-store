@@ -6,17 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js"></script>
 </head>
 <body>
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+        </div>
+    </header>
     <h1>Shop</h1>
-    <h3>Sort By</h3>
-    <div class="shop-navigation">
-<select name="Albums">
-    <option value="new">New Arrivals</option>
-    <option value="all">All Albums</option>
-    <option value="sale">Sale</option>
-</select>
-    </div>
     
+<div class="tab">
+    <button id="b1" class="tablink" onclick="openPage(event, 'new-arrivals')">New Arrivals</button>
+    <button id="b2" class="tablink" onclick="openPage(event, 'sale')">Sale</button>
+    <button id="b3" class="tablink" onclick="openPage(event, 'bestsellers')">Best Sellers</button>
+</div>
+
+<div id="shopping" class="tabcontent">
+    <h3>New Arrivals</h3>
+    <p>Shop new arrivals</p>
+
+</div>
+
+<div id="shopping" class="tabcontent">
+    <h3>Sale</h3>
+    <p>Currently on sale</p>
+</div>
+
+<div id="shopping" class="tabcontent">
+    <h3>Best Selling</h3>
+    <p>Hottest items</p>
+</div>
 </body>
 </html>
