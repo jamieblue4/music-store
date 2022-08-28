@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -20,26 +20,28 @@
     </header>
     <h1>Shop</h1>
     
-<div class="tab">
-    <button id="b1" class="tablink" onclick="openPage(event, 'new-arrivals')">New Arrivals</button>
-    <button id="b2" class="tablink" onclick="openPage(event, 'sale')">Sale</button>
-    <button id="b3" class="tablink" onclick="openPage(event, 'bestsellers')">Best Sellers</button>
+<div class="tabs">
+    <button class="active tab" id="new-arrivals" onclick="openShop()">New Arrivals</button>
+    <button class="tab" id="on-sale" onclick="openShop()">Sale</button>
+    <button class="tab" id="best-selling" onclick="openShop()">Best Selling</button>
 </div>
 
-<div id="shopping" class="tabcontent">
-    <h3>New Arrivals</h3>
-    <p>Shop new arrivals</p>
+    <div class="tab-content">
+    <div class="active" id="new-arrivals">
+        <h13>New Arrivals</h13>
+        <p>Shop new arrivals</p>
+    </div>
 
+    <div id="on-sale">
+        <h3>Sale</h3>
+        <p>Currently on sale</p>
+    </div>
+
+    <div id="best-selling">
+        <h3>Best Selling</h3>
+        <p>Hottest items</p>
+    </div>
 </div>
 
-<div id="shopping" class="tabcontent">
-    <h3>Sale</h3>
-    <p>Currently on sale</p>
-</div>
-
-<div id="shopping" class="tabcontent">
-    <h3>Best Selling</h3>
-    <p>Hottest items</p>
-</div>
 </body>
 </html>

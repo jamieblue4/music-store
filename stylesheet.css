@@ -1,3 +1,5 @@
+/* Navigation Bar */
+
 ul {
     list-style: none;
     text-decoration: none;
@@ -44,6 +46,8 @@ a:visited {
     justify-content: center;
 }
 
+/* Homepage */
+
 .homepage-img img {
     height: 400px;
 }
@@ -66,36 +70,49 @@ a:visited {
 
 /* Shop Styling */
 
-.tab {
+.tabs {
     overflow: hidden;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 1rem;
-    background-color: #79e6a4;
+    background-color: lightskyblue;
 }
 
-.tab button {
+.tabs button {
     background-color: inherit;
+    display: flex;
+    justify-content: space-around;
+    padding: 18px 20px;
     float: left;
     border: none;
     cursor: pointer;
-    padding: 16px 18px;
     transition: 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 10px;
 }
 
-.tab button:hover {
-    background-color: #37aa3d;
+.tabs button:hover {
+    background-color: #2B58B4;
+    color: white;
 }
 
-.tab button.active {
-    background-color: #75e442;
+.tabs button.active {
+    background-color: #2B58B4;
+    color: white;
 }
 
-.tabcontent {
-    display: none;
+.tab-content {
     padding: 10px 14px;
     border: 3px solid #ccc;
     border-top: none;
+    font-family: sans-serif;
+    float: left;
+    display: grid;
 }
+
+
+
+/* Footer */
 
 footer {
     position: absolute;
