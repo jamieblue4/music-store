@@ -91,6 +91,7 @@ body {
 .shop-container {
     display: flex;
     font-family: Robotica, sans-serif;
+    background: white;
 }
 
 .new {
@@ -101,6 +102,42 @@ body {
     height: auto;
     width: 200px;
 }
+
+.overlay:hover {
+    display: block;
+    background: black;
+    opacity: 60%;
+    width: 100%;
+    height: auto;
+    background: white;
+    color: black;
+    position: relative;
+    transition: 0.2s;
+}
+
+.overlay-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: black;
+}
+
+.overlay-text:hover {
+    text-align: center;
+    font-family: Robotica, sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: black;
+
+}
+
 .new h2 {
     font-size: 24px;
 }
@@ -166,4 +203,10 @@ footer {
     height: 3rem;
     padding-left: 0rem;
     margin-left: 0;
+}
+
+/* About Styling */
+.about-container {
+    font-family: Robotica, sans-serif;
+    padding: 1rem;
 }
