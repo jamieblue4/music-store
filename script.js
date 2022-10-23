@@ -2,6 +2,7 @@ const resetButton = document.querySelector('#reset');
 const form = document.querySelector('form');
 const submitButton = document.querySelector('#signup');
 const logoutButton = document.querySelector('#logout-button');
+const greeting = document.querySelector('#greeting');
 
 //Functions
 form.addEventListener('submit', function(e) {
@@ -11,15 +12,27 @@ form.addEventListener('submit', function(e) {
 submitButton.addEventListener('click', function() {
     let name = document.querySelector('#username').value;
     name = localStorage.setItem('name', name);
+
+    nameDisplayCheck();
 });
 
 submitButton.addEventListener('keypress', function(e) {
     if (e.key === 'Enter');
     let name = document.querySelector('#username').value;
     name = localStorage.setItem('name', name);
+
+    nameDisplayCheck();
 });
 
 logoutButton.addEventListener('click', function() {
     let name = localStorage.getItem('name');
     localStorage.removeItem('name');
+    
 });
+
+function nameDisplayCheck() {
+    if (localStorage.getItem('name')) {
+        let name = localStorage.getItem('name');
+        greeting.textContent = `Welcome, ${name}!`;
+    }
+};
