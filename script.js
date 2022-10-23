@@ -8,26 +8,21 @@ const submitButton = document.querySelector('#name-submit');
 
 
 //Functions
+submitButton.addEventListener('click', function(e) {
+    preventDefault(e);
+});
+
 submitButton.addEventListener('click', function() {
     localStorage.setItem('name', userName.value);
-
-    nameDisplayCheck();
 });
 
 submitButton.addEventListener('keypress', function(e) {
     if (e.key === 'Enter');
+    localStorage.setItem('name', userName.value);
 }
 );
 
 logoutButton.addEventListener('click', function() {
-    localStorage.removeItem('name');
+    localStorage.removeItem(userName);
     
-    nameDisplayCheck();
 });
-
-function nameDisplayCheck() {
-    if (localStorage.getItem('name')) {
-        let name = localStorage.getItem('name').value;
-        console.log(name);
-    }
-}

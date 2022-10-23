@@ -96,6 +96,18 @@ body {
     overflow: scroll;
 }
 
+input {
+    font-size: 18px;
+}
+
+button {
+    border-radius: 7px;
+    padding: 3.5px;
+    background: darkblue;
+    color: white;
+    font-size: 14px;
+}
+
 /* Shop Styling */
 .shop-container {
     display: flex;
@@ -211,8 +223,6 @@ footer {
     bottom: 0;
     width: 100%;
     height: 3rem;
-    padding-left: 0rem;
-    margin-left: 0;
 }
 
 /* About Styling */
