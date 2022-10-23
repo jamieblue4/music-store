@@ -23,8 +23,6 @@ ul {
     display: flex;
     flex-direction: row;
     overflow: hidden;
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
 a {
@@ -55,15 +53,17 @@ a:visited {
 }
 
 /* Homepage */
+form {
+    padding: 10px;
+}
 
 .home-container {
     display: flex;
-    
 }
 
 .homepage-text {
     font-family: Robotica, sans-serif;
-    padding: 1rem;
+    padding: 5px;
 }
 
 .homepage-img img {
