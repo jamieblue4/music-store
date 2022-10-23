@@ -3,17 +3,13 @@ const name = document.querySelector('.name');
 const resetButton = document.querySelector('#reset');
 const logoutButton = document.querySelector('#logout');
 const form = document.querySelector('form');
-const getUserName = document.querySelector('#username');
+const userName = document.querySelector('#username');
 const submitButton = document.querySelector('#name-submit');
 
+
 //Functions
-
-form.addEventListener('submit', function(e) { 
-    e.preventDefault();
-});
-
 submitButton.addEventListener('click', function() {
-    localStorage.setItem('name', getUserName.value);
+    localStorage.setItem('name', userName.value);
 
     nameDisplayCheck();
 });
@@ -31,10 +27,7 @@ logoutButton.addEventListener('click', function() {
 
 function nameDisplayCheck() {
     if (localStorage.getItem('name')) {
-        let name = localStorage.getItem('name');
-        let personalGreeting = document.getElementById('.personal-greeting');
-        personalGreeting.appendChild('p');
-    } else {
-  
+        let name = localStorage.getItem('name').value;
+        console.log(name);
     }
 }

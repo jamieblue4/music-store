@@ -1,4 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 /* Navigation Bar */
+.navbar {
+    min-width: 320px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    height: auto;
+    overflow: hidden;
+    justify-content: center;
+    padding: 10px;
+}
 
 ul {
     list-style: none;
@@ -8,14 +23,16 @@ ul {
     display: flex;
     flex-direction: row;
     overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 a {
     text-decoration: none;
     color: white;
-    font-size: 1em;
-    padding-left: 7rem;
-    padding-right: 7rem;
+    font-size: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 a:active {
@@ -35,16 +52,6 @@ a:visited {
     text-decoration: none;
     font-size: 1rem;
     color: white;
-}
-
-.navbar {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    background-color: black;
-    height: auto;
-    overflow: hidden;
-    justify-content: center;
 }
 
 /* Homepage */
@@ -86,6 +93,7 @@ body {
     height: auto;
     min-width: 320px;
     max-width: 2000px;
+    overflow: scroll;
 }
 
 /* Shop Styling */
@@ -93,6 +101,7 @@ body {
     display: flex;
     font-family: Robotica, sans-serif;
     background: white;
+    margin: 0 auto;
 }
 
 .new {
