@@ -42,7 +42,7 @@ a:active {
 a:hover {
     text-decoration: none;
     color: white;
-    background: blue;
+    background: slategray;
     opacity: 80%;
 }
 
@@ -111,112 +111,130 @@ h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/* About Styling */
+.about-container {
+    font-family: Robotica, sans-serif;
+    padding: 1rem;
+}
+
 /* Shop Styling */
 .shop-container {
     display: flex;
-    font-family: Robotica, sans-serif;
-    background: white;
-    margin: 0 auto;
+    justify-content: center;
 }
 
-.new {
-    padding: 1.5rem;
-    cursor: pointer;
-}
-.new img {
-    height: auto;
-    width: 200px;
+h2 {
+    font-size: 32px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.overlay:hover {
-    display: block;
-    background: black;
-    opacity: 60%;
-    width: 100%;
-    height: auto;
-    background: white;
-    color: black;
-    position: relative;
-    transition: 0.2s;
-}
-
-.overlay-text {
-    position: relative;
+.bestseller-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background: black;
-}
-
-.overlay-text:hover {
-    text-align: center;
-    font-family: Robotica, sans-serif;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background: black;
-
-}
-
-.new h2 {
-    font-size: 24px;
-}
-.new h3 {
-    font-size: 18px;
-    margin-bottom: 0;
-}
-.new h4 {
-    font-size: 18px;
-    margin-top: 0;
-}
-
-.sale {
-    padding: 1.5rem;
-    cursor: pointer;
-}
-.sale img {
+    padding: 10px;
     height: auto;
-    width: 200px;
+    width: 25%;
 }
-.sale h2 {
-    font-size: 24px;
-}
-.sale h3 {
+
+.bestseller-title {
     font-size: 20px;
-    margin-bottom: 0;
-}
-.sale h5 {
-    text-decoration: line-through;
-    font-size: 16px;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-.sale h4 {
-    font-size: 18px;
-    color: green;
-    margin-top: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.bestseller {
-    padding: 1.5rem;
-    cursor: pointer;
-}
-.bestseller img {
+.bestseller-img {
     height: auto;
-    width: 200px;
+    width: auto;
 }
-.bestseller h3 {
-    font-size: 18px;
-    margin-bottom: 0;
+
+.bestseller-details {
+    padding: 5px;
+
 }
-.bestseller h4 {
+
+.bestseller-price {
+    font-size: 22px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.bestseller-button {
     font-size: 18px;
-    margin-top: 0;
+    background: lightsteelblue;
+    color: black;
+    border-radius: 5px;
+    padding: 6px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.sale-section {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+    width: 20%;
+}
+
+.sale-title {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.sale-img {
+    height: auto;
+    width: auto;
+}
+
+.sale-details {
+    padding: 5px;
+}
+
+.sale-price {
+    font-size: 22px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.sale-button {
+    font-size: 18px;
+    background: lightsteelblue;
+    color: black;
+    border-radius: 5px;
+    padding: 6px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.new-arrival-section {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+    width: 25%;
+}
+
+.new-arrival-title {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.new-arrival-img {
+    height: auto;
+    width: auto;
+}
+
+.new-arrival-details {
+    padding: 5px;
+}
+
+.new-arrival-price {
+    font-size: 22px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.new-arrival-button {
+    font-size: 18px;
+    background: lightsteelblue;
+    color: black;
+    border-radius: 5px;
+    padding: 6px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* Footer */
@@ -226,10 +244,4 @@ footer {
     bottom: 0;
     width: 100%;
     height: 3rem;
-}
-
-/* About Styling */
-.about-container {
-    font-family: Robotica, sans-serif;
-    padding: 1rem;
 }
