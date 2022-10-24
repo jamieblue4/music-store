@@ -28,11 +28,14 @@ logoutButton.addEventListener('click', function() {
     let name = localStorage.getItem('name');
     localStorage.removeItem('name');
     
+    nameDisplayCheck();
 });
 
 function nameDisplayCheck() {
     if (localStorage.getItem('name')) {
         let name = localStorage.getItem('name');
         greeting.textContent = `Welcome, ${name}!`;
+    } else {
+        greeting.textContent = `You're all signed out.`;
     }
 };
