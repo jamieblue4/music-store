@@ -236,6 +236,24 @@ h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.shop-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.minus {
+    margin: 3px;
+}
+
+.plus {
+    margin: 3px;
+}
+
+.quantity {
+    font-size: 20px;
+    margin: 3px;
+}
+
 /* Footer */
 
 footer {

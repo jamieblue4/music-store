@@ -39,3 +39,15 @@ function nameDisplayCheck() {
         greeting.textContent = `You're all signed out.`;
     }
 };
+
+let increment = ()=> {
+
+}
+
+let decrement = ()=> {
+
+}
+
+let update = ()=> {
+    
+}
