@@ -51,3 +51,10 @@ let decrement = ()=> {
 let update = ()=> {
     
 }
+
+let shop_items = [
+    
+]
+
+let cart = [];
+

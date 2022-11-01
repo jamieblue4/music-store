@@ -119,7 +119,7 @@ h2 {
 
 /* Shop Styling */
 .shop-container {
-    display: flex;
+    displaY: flex;
     justify-content: center;
 }
 
@@ -162,6 +162,7 @@ h2 {
     border-radius: 5px;
     padding: 6px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
 }
 
 .sale-section {
@@ -198,6 +199,7 @@ h2 {
     border-radius: 5px;
     padding: 6px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
 }
 
 .new-arrival-section {
@@ -234,6 +236,7 @@ h2 {
     border-radius: 5px;
     padding: 6px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
 }
 
 .shop-buttons {
@@ -243,15 +246,34 @@ h2 {
 
 .minus {
     margin: 3px;
+    cursor: pointer;
 }
 
 .plus {
     margin: 3px;
+    cursor: pointer;
 }
 
 .quantity {
     font-size: 20px;
     margin: 3px;
+}
+
+.cart-container {
+    display: flex;
+    align-items: center;
+    column-count: 3;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.remove-button {
+    border: solid;
+    padding: 0.3em;
+    border-radius: 10px;
+    cursor: pointer;
+    background: red;
+    color: white;
 }
 
 /* Footer */
