@@ -5,11 +5,8 @@ const logoutButton = document.querySelector('#logout-button');
 const greeting = document.querySelector('#greeting');
 
 //Functions
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-});
-
 submitButton.addEventListener('click', function() {
+    e.preventDefault();
     let name = document.querySelector('#username').value;
     name = localStorage.setItem('name', name);
 
@@ -17,6 +14,7 @@ submitButton.addEventListener('click', function() {
 });
 
 submitButton.addEventListener('keypress', function(e) {
+    e.preventDefault();
     if (e.key === 'Enter');
     let name = document.querySelector('#username').value;
     name = localStorage.setItem('name', name);
@@ -40,21 +38,19 @@ function nameDisplayCheck() {
     }
 };
 
-let increment = ()=> {
+//Add to cart section
+let carts_button = document.querySelectorAll('.add-to-cart-button');
+
+for (var i = 0; i < carts.length; i++) {
 
 }
 
-let decrement = ()=> {
+carts_button.addEventListener('click', addToCart);
+
+function addToCart(e) {
 
 }
 
-let update = ()=> {
-    
+function cartRender() {
+
 }
-
-let shop_items = [
-    
-]
-
-let cart = [];
-

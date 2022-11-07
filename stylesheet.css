@@ -119,7 +119,7 @@ h2 {
 
 /* Shop Styling */
 .shop-container {
-    displaY: flex;
+    display: flex;
     justify-content: center;
 }
 
@@ -136,33 +136,23 @@ h2 {
     width: 25%;
 }
 
-.bestseller-title {
+.shop-title {
     font-size: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.bestseller-img {
+.shop-img {
     height: auto;
     width: auto;
 }
 
-.bestseller-details {
+.shop-details {
     padding: 5px;
 }
 
-.bestseller-price {
+.shop-price {
     font-size: 22px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.bestseller-button {
-    font-size: 18px;
-    background: lightsteelblue;
-    color: black;
-    border-radius: 5px;
-    padding: 6px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    cursor: pointer;
 }
 
 .sale-section {
@@ -173,35 +163,6 @@ h2 {
     width: 20%;
 }
 
-.sale-title {
-    font-size: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.sale-img {
-    height: auto;
-    width: auto;
-}
-
-.sale-details {
-    padding: 5px;
-}
-
-.sale-price {
-    font-size: 22px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.sale-button {
-    font-size: 18px;
-    background: lightsteelblue;
-    color: black;
-    border-radius: 5px;
-    padding: 6px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    cursor: pointer;
-}
-
 .new-arrival-section {
     display: flex;
     flex-direction: column;
@@ -210,26 +171,7 @@ h2 {
     width: 25%;
 }
 
-.new-arrival-title {
-    font-size: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.new-arrival-img {
-    height: auto;
-    width: auto;
-}
-
-.new-arrival-details {
-    padding: 5px;
-}
-
-.new-arrival-price {
-    font-size: 22px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.new-arrival-button {
+.add-to-cart-button {
     font-size: 18px;
     background: lightsteelblue;
     color: black;
@@ -244,27 +186,40 @@ h2 {
     justify-content: center;
 }
 
-.minus {
-    margin: 3px;
-    cursor: pointer;
-}
-
-.plus {
-    margin: 3px;
-    cursor: pointer;
-}
-
-.quantity {
-    font-size: 20px;
-    margin: 3px;
+.cart-header {
+    display: flex;
+    justify-content: center;
 }
 
 .cart-container {
     display: flex;
     align-items: center;
-    column-count: 3;
     justify-content: space-between;
-    width: 40%;
+    width: 90%;
+}
+
+.cart-row {
+    display: flex;
+    align-items: center;
+    margin-left: 40%;
+}
+
+.cart-item {
+    display: flex;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.cart-price {
+    display: flex;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.cart-quantity {
+    display: flex;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .remove-button {

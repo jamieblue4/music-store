@@ -19,66 +19,59 @@
     </header>
     <h1>Shop</h1>
 <div class="shop-container">
-<div class="bestseller-section">
+<div class="bestseller-section" id="bestseller">
     <h2>Best Sellers</h2>
-    <span class="bestseller-title">Biggest Hit by Popular Artist</span>
-    <img class="bestseller-img" src="bestseller.jpeg">
-        <div class="bestseller-details">
-            <span class="bestseller-price">$14.99</span>
+    <span class="shop-title">Biggest Hit by Popular Artist</span>
+    <img class="shop-img" src="bestseller.jpeg">
+        <div class="shop-details">
+            <span class="shop-price">$14.99</span>
         <div class="shop-buttons">
-            <button class="bestseller-button" type="button">Add to Cart</button>
-            <button onclick="decrement()" class="minus">-</button>
-            <div class="quantity">0</div>
-            <button onclick="increment()" class="plus">+</button>
+            <button class="add-to-cart-button" type="button">Add to Cart</button>
         </div>
         </div>
 </div>
 
-<div class="sale-section">
+<div class="sale-section" id="sale">
     <h2>On Sale</h2>
-    <span class="sale-title">On Sale Now</span>
-    <img class="sale-img" src="sale.jpeg">
-        <div class="sale-details">
-            <span class="sale-price">$8.99</span>
+    <span class="shop-title">On Sale Now</span>
+    <img class="shop-img" src="sale.jpeg">
+        <div class="shop-details">
+            <span class="shop-price">$8.99</span>
         <div class="shop-buttons">
-            <button class="sale-button" type="button">Add to Cart</button>
-            <button onclick="decrement()" class="minus">-</button>
-            <div class="quantity">0</div>
-            <button onclick="increment()" class="plus">+</button>
+            <button class="add-to-cart-button" type="button">Add to Cart</button>
         </div>
         </div>
 </div>
 
-<div class="new-arrival-section">
+<div class="new-arrival-section" id="newarrival">
     <h2>New Arrival</h2>
-    <span class="new-arrival-title">The Newest Drop</span>
-    <img class="new-arrival-img" src="record-wall.jpeg">
-        <div class="new-arrival-details">
-            <span class="new-arrival-price">$19.99</span>
+    <span class="shop-title">The Newest Drop</span>
+    <img class="shop-img" src="record-wall.jpeg">
+        <div class="shop-details">
+            <span class="shop-price">$19.99</span>
         <div class="shop-buttons">
-            <button class="new-arrival-button" type="button">Add to Cart</button>
-            <button onclick="decrement()" class="minus">-</button>
-            <div class="quantity">0</div>
-            <button onclick="increment()" class="plus">+</button>
+            <button class="add-to-cart-button" type="button">Add to Cart</button>
         </div>
         </div>
 
 </div>
 </div>
 
-<h2>Cart</h2>
+<h2 class="cart-header">Cart</h2>
 <div class="cart-container">
-    <div class="item">
-        <h4>Item</h4>
+   <div class="cart-row">
+    <span class="cart-item">Item</span>
+    <span class="cart-price">Price</span>
+    <span class="cart-quantity">Quantity</span>
+   </div>
+   <div class="cart-items">
 
-    </div>
-    <div class="quantity-count">
-        <h4>Quantity</h4>
-    </div>
-    <butto class="remove-button">Remove</button>
-
-
-    </div>
+   </div>
+   <div class="cart-total">
+        <strong class="cart-total-title">Total</strong>
+        <span class="cart-total-price">$0</span>
+    <button class="button-buy-now" type="button">Buy Now</button>
+   </div>
 </div>
 <script src="script.js"></script>
 </body>
