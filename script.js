@@ -1,10 +1,10 @@
 const resetButton = document.querySelector('#reset');
-const form = document.querySelector('form');
 const submitButton = document.querySelector('#signup');
 const logoutButton = document.querySelector('#logout-button');
 const greeting = document.querySelector('#greeting');
+const form = document.querySelector('form');
 
-//Functions
+//Signup Functions
 form.addEventListner('click', function(e) {
     e.preventDefault();
 });
