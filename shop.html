@@ -26,7 +26,7 @@
         <div class="shop-details">
             <span class="shop-price">$14.99</span>
         <div class="shop-buttons">
-            <button class="add-to-cart-button" type="button">Add to Cart</button>
+            <button class="add-to-cart-button">Add To Cart</button>
         </div>
         </div>
 </div>
@@ -37,9 +37,9 @@
     <img class="shop-img" src="sale.jpeg">
         <div class="shop-details">
             <span class="shop-price">$8.99</span>
-        <div class="shop-buttons">
-            <button class="add-to-cart-button" type="button">Add to Cart</button>
-        </div>
+            <div class="shop-buttons">
+                <button class="add-to-cart-button">Add To Cart</button>
+            </div>
         </div>
 </div>
 
@@ -49,28 +49,76 @@
     <img class="shop-img" src="record-wall.jpeg">
         <div class="shop-details">
             <span class="shop-price">$19.99</span>
-        <div class="shop-buttons">
-            <button class="add-to-cart-button" type="button">Add to Cart</button>
-        </div>
+            <div class="shop-buttons">
+                <button class="add-to-cart-button">Add To Cart</button>
+            </div>
         </div>
 
 </div>
 </div>
-
-<h2 class="cart-header">Cart</h2>
-<div class="cart-container">
-   <div class="cart-row">
-    <span class="cart-item">Item</span>
-    <span class="cart-price">Price</span>
-    <span class="cart-quantity">Quantity</span>
    </div>
-   <div class="cart-items">
 
-   </div>
    <div class="cart-total">
         <strong class="cart-total-title">Total</strong>
         <span class="cart-total-price">$0</span>
-    <button class="button-buy-now" type="button">Buy Now</button>
+    <div class="add-to-cart-container">
+        <a href="#0" class="cart_trigger text-replace">
+            Cart
+                <ul class="cart_count">
+                    <li>0</li>
+                    <li>0</li>
+                </ul>
+        </a>
+
+    <div class="cart-content">
+        <div class="cart-layout">
+            <header class="cart-header">
+                <h2>Cart</h2>
+                <span class="cart-undo">Item removed. <a href="#0">Undo</a></span>
+            </header>
+
+    <div class="cart-body">
+        <ul>
+            <li class="cart_product">
+                <div class="cart_image">
+                    <a href="#0">
+                        <img src="" alt="placeholder">
+                    </a>
+                </div>
+
+                <div class="cart_details">
+                    <h3 class="truncate"><a href="#0">Product Name</a></h3>
+
+                    <span class="cart_price">$0</span>
+
+                    <div class-="cart_actions">
+                        <a href="#0" class="cart_delete-item">Delete</a>
+
+                        <div class="cart_quantity">
+                            <lavel for="productId">Qty</label>
+
+                        <span class="cart_select">
+                            <select class="reset" id="productId" name="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+
+    <footer class="cart_footer">
+        <a href="#0" class="cart_checkout">
+            <em>Checkout - $<span>0</span></em>
+        </a>
+    </footer>
+        </div>
+    </div> <!-- .cart-content -->
+    </div> <!-- .add-to-cart-container -->
    </div>
 </div>
 <script src="script.js"></script>
