@@ -186,40 +186,10 @@ h2 {
     justify-content: center;
 }
 
-.cart-header {
-    display: flex;
-    justify-content: center;
-}
-
-.cart-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-}
-
-.cart-row {
-    display: flex;
-    align-items: center;
-    margin-left: 40%;
-}
-
-.cart-item {
-    display: flex;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-.cart-price {
-    display: flex;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-.cart-quantity {
-    display: flex;
-    padding-left: 25px;
-    padding-right: 25px;
+a #cart-style {
+    color: black;
+    background-color: white;
+    
 }
 
 .remove-button {
@@ -229,6 +199,13 @@ h2 {
     cursor: pointer;
     background: red;
     color: white;
+}
+
+/* Cart Styling */
+.cart-container {
+    display: flex;
+    justify-content: center;
+    padding: 5em;
 }
 
 /* Footer */
