@@ -1,17 +1,20 @@
 // Signup Variables
-const resetButton = document.querySelector('#reset');
-const submitButton = document.querySelector('#signup');
-const logoutButton = document.querySelector('#logout-button');
-const greeting = document.querySelector('#greeting');
-let form = document.querySelector('form');
+const resetButton = document.getElementById('reset');
+const submitButton = document.getElementById('signup');
+const logoutButton = document.getElementById('logout-button');
+const greeting = document.getElementById('greeting');
+let form = document.getElementById('form');
 
 //Signup Functions
-form.addEventListner('click', function(e) {
+if (form) {
+form.addEventListener('click', function(e) {
     e.preventDefault();
 });
+console.log("we're good to go :)");
+}
 
 submitButton.addEventListener('click', function(e) {
-    let name = document.querySelector('#username').value;
+    let name = document.getElementById('username').value;
     name = localStorage.setItem('name', name);
 
     nameDisplayCheck();
@@ -19,7 +22,7 @@ submitButton.addEventListener('click', function(e) {
 
 submitButton.addEventListener('keypress', function(e) {
     if (e.key === 'Enter');
-    let name = document.querySelector('#username').value;
+    let name = document.getElementById('username').value;
     name = localStorage.setItem('name', name);
 
     nameDisplayCheck();
