@@ -20,11 +20,11 @@
     <h1>Shop</h1>
 <div class="shop-container">
 <div class="bestseller-section" id="bestseller">
-    <h2>Best Sellers</h2>
+    <h2 id="data-bestseller">Best Sellers</h2>
     <span class="shop-title">Biggest Hit by Popular Artist</span>
-    <img class="shop-img" src="bestseller.jpeg">
+    <img class="shop-img" id="bestseller-img-data" src="bestseller.jpeg">
         <div class="shop-details">
-            <span class="shop-price">$14.99</span>
+            <span class="shop-price" id="bestseller-price-data">$14.99</span>
         <div class="shop-buttons">
             <button class="add-to-cart-button">Add To Cart</button>
         </div>
@@ -32,11 +32,11 @@
 </div>
 
 <div class="sale-section" id="sale">
-    <h2>On Sale</h2>
+    <h2 id="data-on-sale">On Sale</h2>
     <span class="shop-title">On Sale Now</span>
-    <img class="shop-img" src="sale.jpeg">
+    <img class="shop-img" id="on-sale-img" src="sale.jpeg">
         <div class="shop-details">
-            <span class="shop-price">$8.99</span>
+            <span class="shop-price" id="on-sale-price-data">$8.99</span>
             <div class="shop-buttons">
                 <button class="add-to-cart-button">Add To Cart</button>
             </div>
@@ -44,11 +44,11 @@
 </div>
 
 <div class="new-arrival-section" id="newarrival">
-    <h2>New Arrival</h2>
+    <h2 id="data-new-arrival">New Arrival</h2>
     <span class="shop-title">The Newest Drop</span>
-    <img class="shop-img" src="record-wall.jpeg">
+    <img class="shop-img" id="new-arrival-img" src="record-wall.jpeg">
         <div class="shop-details">
-            <span class="shop-price">$19.99</span>
+            <span class="shop-price" id="new-arrival-price-data">$19.99</span>
             <div class="shop-buttons">
                 <button class="add-to-cart-button">Add To Cart</button>
             </div>
@@ -59,35 +59,10 @@
    </div>
 
 <div class="cart-container">
-<div class="modal fade" id="cart" tabindex="-1" role="dialogue" aria-labelledby="skyBlueRecordShop" aria-hidden="true">
-    <div class="modal-dialogue modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-header" id="modalHeaderLabel">Cart</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-    <div class="cart-content">
-
-    <div class="modal-body">
-    <table class="cart-body">
-       
-    </table>
-        <div class="total-price">
-            <p></p>
-            </div>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="cart-close" data-dismiss="modal">Close</button>
-        <button type="button" class="order-now-button">Order Now</button>
-    </div>
-        </div>
-    </div>
-    </div>
-</div>
+    <div class="cart-heading">Cart</div>
 
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>
