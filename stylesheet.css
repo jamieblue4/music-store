@@ -222,8 +222,8 @@ tr {
 
 td {
     display: flex;
-    border: 1px solid black;
-    padding: 0.75em;
+    padding: 1em;
+    font-size: 18px;
 }
 
 /* Footer */
