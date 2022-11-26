@@ -70,7 +70,22 @@ var shopItems = [
 console.log(shopItems);
 
 var cartItems = [];
+var addItem = document.querySelectorAll('.add-to-cart-button');
+var cartItemName = document.getElementsByClassName('cart-name');
+var cartItemPrice = document.getElementsByClassName('cart-price');
+var cartItemQuantity = document.getElementsByClassName('cart-quantity');
 
 function addToCart() {
-    
+    addItem = cartItems;
+    updateCart();
+    updateCartTotal();
+}
+
+function updateCart() {
+    cartItems.appendChild
+    updateCartTotal();
+}
+
+function updateCartTotal() {
+
 }
