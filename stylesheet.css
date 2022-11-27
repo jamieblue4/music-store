@@ -204,15 +204,25 @@ a #cart-style {
 /* Cart Styling */
 .cart-container {
     padding-bottom: 1em;
+    margin: 2rem;
 }
 
 .cart-heading h2 {
     text-align: center;
 }
 
+.instruction {
+    display: flex;
+    margin-left: 1em;
+}
+
 .cart-content {
     display: flex;
     justify-content: space-between;
+}
+
+.cart-name {
+    cursor: pointer;
 }
 
 .cart-quantity {

@@ -53,6 +53,7 @@ function nameDisplayCheck() {
 //Add to cart Functions and Shop Section
 var shop = document.querySelector('.shop-container');
 var cartItems = document.querySelector('.cart-container');
+var total = document.querySelector('.cart-total');
 
 const product = [
     {
@@ -62,7 +63,7 @@ const product = [
     },
     {
         id: 1,
-        name: 'Sale',
+        name: 'On Sale',
         price: 8.99,
     },
     {
@@ -73,7 +74,8 @@ const product = [
 ];
 
 // empty cart array
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("CART")) || [];
+updateCart();
 
 // Add to cart
 function addToCart(id) {
@@ -93,7 +95,10 @@ function addToCart(id) {
 // update cart
 function updateCart() {
     renderCartItems();
-    //renderTotal();
+    renderTotal();
+
+    // save cart to local storage
+    localStorage.setItem("CART", JSON.stringify(cart));
 }
 
 // calculate and render subtotal
@@ -102,8 +107,11 @@ function renderTotal() {
 
     cart.forEach((item) => {
         totalPrice += item.price * item.numberOfUnits;
-        totalItems += item.oldNumberOfUnits;
     });
+
+    total.innerHTML = `
+    Total: $${totalPrice.toFixed(2)}
+    `
 }
 
 // render cart items
@@ -112,7 +120,7 @@ function renderCartItems() {
     cart.forEach((item) => {
         cartItems.innerHTML += `
             <div class="cart-content">
-            <h4 class="cart-name">
+            <h4 class="cart-name" onclick="removeItemFromCart(${item.id})">
             ${item.name}
             </h4>
             <h4 class="cart-price">
@@ -126,6 +134,13 @@ function renderCartItems() {
         </div>
             `;
     });
+}
+
+// remove item from cart
+function removeItemFromCart(id) {
+    cart = cart.filter((item) => item.id !== id);
+
+    updateCart();
 }
 
 // change number of units for an item
