@@ -54,8 +54,10 @@ a:visited {
 
 /* Homepage */
 form {
-    padding: 10px;
+    display: flex;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-items: center;
+    margin-left: 5em;
 }
 
 .home-container {
@@ -102,7 +104,9 @@ h1 {
     text-align: center;
 }
 
-h2 {
+.signup-text {
+    padding-left: 1em;
+    font-size: 30px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
