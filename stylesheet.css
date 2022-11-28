@@ -148,6 +148,7 @@ h2 {
 .shop-img {
     height: auto;
     width: auto;
+    cursor: pointer;
 }
 
 .shop-details {
@@ -218,11 +219,20 @@ a #cart-style {
 .instruction {
     display: flex;
     margin-left: 1em;
+    font-size: 26px;
 }
 
 .cart-content {
     display: flex;
     justify-content: space-between;
+    background: lightblue;
+    color: black;
+    padding: 0.5em;
+    font-size: 22px;
+}
+
+.cart-content:hover {
+    background: red;
 }
 
 .cart-name {
@@ -255,6 +265,11 @@ a #cart-style {
     cursor: pointer;
     font-weight: 400px;
     border: 2px solid;
+}
+
+.checkout:hover {
+    background: green;
+    color: white;
 }
 
 /* Footer */
