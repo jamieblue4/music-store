@@ -1,54 +1,23 @@
-// Signup Variables
-const resetButton = document.getElementById('reset');
-const submitButton = document.getElementById('signup');
-const logoutButton = document.getElementById('logout-button');
-const greeting = document.getElementById('greeting');
-let form = document.getElementById('form');
+// Modal / cart logic
 
-//Signup Functions
-if (form) {
-form.addEventListener('click', function(e) {
-    e.preventDefault();
-});
-console.log("we're good to go :)");
+var modal = document.getElementById('cartModal');
+
+var cartBtn = document.getElementById('cartButton');
+var span = document.getElementsByClassName('close')[0];
+
+cartBtn.onclick = function() {
+    modal.style.display = "block";
 }
 
-if (submitButton) {
-submitButton.addEventListener('click', function(e) {
-    let name = document.getElementById('username').value;
-    name = localStorage.setItem('name', name);
-
-    nameDisplayCheck();
-});
+span.onclick = function() {
+    modal.style.display = "none";
 }
 
-if (submitButton) {
-submitButton.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter');
-    let name = document.getElementById('username').value;
-    name = localStorage.setItem('name', name);
-
-    nameDisplayCheck();
-});
-}
-
-if (logoutButton) {
-logoutButton.addEventListener('click', function() {
-    let name = localStorage.getItem('name');
-    localStorage.removeItem('name');
-    
-    nameDisplayCheck();
-});
-}
-
-function nameDisplayCheck() {
-    if (localStorage.getItem('name')) {
-        let name = localStorage.getItem('name');
-        greeting.textContent = `Welcome, ${name}!`;
-    } else {
-        greeting.textContent = `You're all signed out.`;
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
     }
-};
+}
 
 //Add to cart Functions and Shop Section
 var shop = document.querySelector('.shop-container');
@@ -116,14 +85,14 @@ function renderTotal() {
 
 // render cart items
 function renderCartItems() {
-    cartItems.innerHTML = ""; // clear cart before proceeding
+    cartItems.innerHTML = "";
     cart.forEach((item) => {
         cartItems.innerHTML += `
             <div class="cart-content">
             <h4 class="cart-name" onclick="removeItemFromCart(${item.id})">
             ${item.name}
             </h4>
-            <h4 class="cart-price">
+            <h4 class="cart-price" onclick="removeItemFromCart(${item.id})">
             ${item.price}
             </h4>
             <h4 class="cart-quantity">
@@ -133,7 +102,8 @@ function renderCartItems() {
             </h4>
         </div>
             `;
-    });
+    }
+    );
 }
 
 // remove item from cart

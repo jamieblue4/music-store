@@ -57,18 +57,29 @@
 </div>
    </div>
 
-    <div class="cart-heading"><h2>Cart</h2></div>
-    <div class="instruction">Click the name to remove item from cart.</div>
-<div class="cart-container">
+<button id="cartButton">Your Cart</button>
 
-   </div>
-<div class="cart-total">
-    
-</div>
-<div class="checkout" onclick="alert('Thank you for your purchase!')">
-    Checkout
-</div>
+<div id="cartModal" class="modal">
+    <div class="modalContent">
+        <span class="close">&times;</span>
 
+        <h2>Cart</h2>
+    <div class="cartContent">
+        <div class="cart-container">
+
+        </div>
+        <div class="cart-total">
+
+        </div>
+    </div>
+
+    </div>
+    <div class="cartButtons">
+        <button id="checkoutButton" onclick="alert('Thank you for your purchase!')">
+            Checkout
+        </button>
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>
