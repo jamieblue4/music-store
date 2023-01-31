@@ -1,11 +1,10 @@
 // Modal / cart logic
-
 var modal = document.getElementById('cartModal');
 
-var cartBtn = document.getElementById('yourCartButton');
+var yourCartButton = document.getElementById('yourCartButton');
 var span = document.getElementsByClassName('close')[0];
 
-cartBtn.onclick = function() {
+yourCartButton.onclick = function() {
     modal.style.display = "block";
 }
 
@@ -95,11 +94,8 @@ function renderCartItems() {
             <h4 class="cart-price" onclick="removeItemFromCart(${item.id})">
             ${item.price}
             </h4>
-            <h4 class="cart-quantity">
-            <div class="btn-minus" onclick="changeNumberOfUnits('minus', ${item.id})">-</div>
-            ${item.numberOfUnits}
-            <div class="btn-plus" onclick="changeNumberOfUnits('plus', ${item.id})">+</div>
-            </h4>
+            <h4 class="remove-button">
+            <button id="removeButton" onclick="removeItemFromCart(${item.id})">Remove</button>
         </div>
             `;
     }
@@ -129,27 +125,5 @@ checkoutButton.onclick = function clearCart() {
     cart.length = 0;
     alert('Thank you for your purchase!');
 
-    updateCart();
-}
-
-// change number of units for an item
-function changeNumberOfUnits(action, id) {
-    cart = cart.map((item) => {
-
-        let oldNumberOfUnits = item.numberOfUnits;
-
-        if(item.id === id) {
-            if(action === "minus" && item.numberOfUnits > 1) {
-                oldNumberOfUnits--;
-            } else if (action === "plus") {
-                oldNumberOfUnits++;
-            }
-        }
-
-        return {
-        ...item,
-        numberOfUnits: oldNumberOfUnits,
-        };
-    });
     updateCart();
 }

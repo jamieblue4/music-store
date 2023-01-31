@@ -232,16 +232,12 @@ a #cart-style {
     
 }
 
-.remove-button {
-    border: solid;
-    padding: 0.3em;
-    border-radius: 10px;
+/* Cart Styling */
+.close {
     cursor: pointer;
-    background: red;
-    color: white;
+    font-size: 22px;
 }
 
-/* Cart Styling */
 .cart-container {
     padding-bottom: 1em;
     margin: 2rem;
@@ -263,25 +259,14 @@ a #cart-style {
     color: black;
     padding: 0.5em;
     font-size: 22px;
-}
-
-.cart-content:hover {
     background-color: white;
-    cursor: pointer;
 }
 
-.cart-quantity {
-    display: flex;
-}
-
-.btn-minus {
-    padding-right: 0.3em;
+#removeButton {
+    background-color: black;
+    color: white;
     cursor: pointer;
-}
-
-.btn-plus {
-    padding-left: 0.3em;
-    cursor: pointer;
+    padding: 3px;
 }
 
 .cart-total {
