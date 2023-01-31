@@ -2,7 +2,7 @@
 
 var modal = document.getElementById('cartModal');
 
-var cartBtn = document.getElementById('cartButton');
+var cartBtn = document.getElementById('yourCartButton');
 var span = document.getElementsByClassName('close')[0];
 
 cartBtn.onclick = function() {
@@ -109,6 +109,25 @@ function renderCartItems() {
 // remove item from cart
 function removeItemFromCart(id) {
     cart = cart.filter((item) => item.id !== id);
+
+    updateCart();
+}
+
+// clear cart contents
+
+let clearCart = document.getElementById('clearCartButton');
+
+clearCart.onclick = function clearCart() {
+    cart.length = 0;
+    
+    updateCart();
+}
+
+let checkoutButton = document.getElementById('checkoutButton');
+
+checkoutButton.onclick = function clearCart() {
+    cart.length = 0;
+    alert('Thank you for your purchase!');
 
     updateCart();
 }

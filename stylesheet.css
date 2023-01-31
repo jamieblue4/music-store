@@ -5,7 +5,7 @@
 /* Navigation Bar */
 .navbar {
     min-width: 320px;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     background-color: black;
@@ -110,10 +110,11 @@ h1 {
 }
 
 /* Cart / Modal Styling */
-#cartButton {
+#yourCartButton {
     display: flex;
     text-align: center;
     margin: auto;
+    cursor: pointer;
 }
 
 .close {
@@ -123,8 +124,8 @@ h1 {
 }
 
 .modal {
+    margin-top: 10px;
     display: none;
-    z-index: 1;
     left: 0;
     top: 0;
     overflow: auto;
@@ -137,7 +138,6 @@ h1 {
 
 .modalContent {
    text-align: center;
-   
 }
 
 .cart-content {
@@ -150,14 +150,16 @@ h1 {
     display: flex;
     text-align: center;
     margin: auto;
-    padding-right: 20px;
     justify-content: right;
+    padding-right: 10px;
 }
 
 /* Shop Styling */
 .shop-container {
     display: flex;
     justify-content: center;
+    width: 100vw;
+    height: auto;
 }
 
 h2 {
@@ -300,6 +302,10 @@ a #cart-style {
 .checkout:hover {
     background: green;
     color: white;
+}
+
+.cartButtons button {
+    cursor: pointer;
 }
 
 /* Footer */
