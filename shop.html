@@ -5,61 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
-    <link href="stylesheet.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
     <header>
-        <div class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark justify-content-center">
+            <ul class="navbar-nav">
+                <li><a class="navbar-brand" href="index.html">Sky Blue Records</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
     <h1>Shop</h1>
-<div class="shop-container">
-<div class="bestseller-section" id="bestseller">
-    <h2 id="data-bestseller">Best Sellers</h2>
-    <span class="shop-title">Biggest Hit by Popular Artist</span>
-    <img class="shop-img" id="bestseller-img-data" src="bestseller.jpeg" onclick="addToCart(0)">
-        <div class="shop-details">
-            <span class="shop-price" id="bestseller-price">$14.99</span>
-        <div class="shop-buttons">
-            <button class="add-to-cart-button" onclick="addToCart(0)">Add To Cart</button>
-        </div>
-        </div>
+
+<div class="shop-container container-fluid">
+<div class="card" style="width: 400px;">
+    <img class="shop-img" style="height:200px;width:auto;" id="bestseller-img-data" src="bestseller.jpeg" onclick="addToCart(0)">
+    <h4 class="card-title" id="bestseller">Best Sellers</h4>
+    <p class="shop-title">Biggest hits by popular artists.</p>
+    <div class="shop-details">
+        <span class="shop-price" id="bestseller-price">$14.99</span>
+    <div class="shop-buttons">
+        <button class="add-to-cart-button" onclick="addToCart(0)">Add To Cart</button>
+    </div>
+</div>
 </div>
 
-<div class="sale-section" id="sale">
-    <h2 id="data-on-sale">On Sale</h2>
-    <span class="shop-title">On Sale Now</span>
-    <img class="shop-img" id="on-sale-img" src="sale.jpeg" onclick="addToCart(1)">
-        <div class="shop-details">
-            <span class="shop-price" id="on-sale-price">$8.99</span>
+<div class="card" style="width: 400px;">
+    <img class="shop-img" style="height:200px;width: auto;" id="on-sale-img" src="sale.jpeg" onclick="addToCart(1)">
+    <h4 class="card-title" id="data-on-sale">On Sale</h4>
+    <p class="shop-title">Currently on sale.</p>
+    <div class="shop-details">
+        <span class="shop-price" id="on-sale-price">$8.99</span>
             <div class="shop-buttons">
                 <button class="add-to-cart-button" onclick="addToCart(1)">Add To Cart</button>
             </div>
         </div>
-</div>
+    </div>
 
-<div class="new-arrival-section" id="newarrival">
-    <h2 id="data-new-arrival">New Arrival</h2>
-    <span class="shop-title">The Newest Drop</span>
-    <img class="shop-img" id="new-arrival-img" src="record-wall.jpeg" onclick="addToCart(2)">
-        <div class="shop-details">
-            <span class="shop-price" id="new-arrival-price">$19.99</span>
-            <div class="shop-buttons">
-                <button class="add-to-cart-button" onclick="addToCart(2)">Add To Cart</button>
-            </div>
+    <div class="card" style="width: 400px;">
+        <img class="shop-img" style="height:200px; width:auto;" id="new-arrival-img" src="record-wall.jpeg" onclick="addToCart(2)">
+        <div class="new-arrival-section" id="newarrival">
+            <h4 class="card-title" id="data-new-arrival">New Arrival</h2>
+            <p class="shop-title">Brand new, just in!</p>
+                <div class="shop-details">
+                    <span class="shop-price" id="new-arrival-price">$19.99</span>
+                    <div class="shop-buttons">
+                        <button class="add-to-cart-button" onclick="addToCart(2)">Add To Cart</button>
+                    </div>
+                </div>
+        
         </div>
-
+    </div>
 </div>
+
 </div>
    </div>
 
 <button id="yourCartButton">Open Cart</button>
 
-<div id="cartModal" class="modal">
+<div id="cartModal" class="modal modal-dialog modal-lg">
     <div class="modalContent">
         <span class="close">&times;</span>
 
