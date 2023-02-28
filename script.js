@@ -1,16 +1,7 @@
 // Modal / cart logic
-var modal = document.getElementById('cartModal');
+const modal = document.getElementById("cartModal");
 
 var yourCartButton = document.getElementById('yourCartButton');
-var span = document.getElementsByClassName('close')[0];
-
-yourCartButton.onclick = function() {
-    modal.style.display = "block";
-}
-
-span.onclick = function() {
-    modal.style.display = "none";
-}
 
 window.onclick = function(event) {
     if (event.target == modal) {
@@ -48,13 +39,13 @@ updateCart();
 // Add to cart
 function addToCart(id) {
     if(cart.some((item) => item.id === id)){
-        changeNumberOfUnits("plus", id);
+        item.id++
     } else {
         const item = product.find((product) => product.id === id);
 
         cart.push({
             ...item,
-            numberOfUnits: 1,
+            
         });
       }
       updateCart();
