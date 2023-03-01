@@ -1,7 +1,7 @@
 // Modal / cart logic
 const modal = document.getElementById("cartModal");
 
-var yourCartButton = document.getElementById('yourCartButton');
+var itemsInCart = document.getElementById("yourCartButton");
 
 window.onclick = function(event) {
     if (event.target == modal) {
@@ -18,7 +18,7 @@ const product = [
     {
         id: 0,
         name: 'Best Seller',
-        price: 14.99,  
+        price: 14.99,
     },
     {
         id: 1,
@@ -38,14 +38,15 @@ updateCart();
 
 // Add to cart
 function addToCart(id) {
+    // see if item is already in cart
     if(cart.some((item) => item.id === id)){
-        item.id++
+        changeNumberOfUnits("plus", id);
     } else {
         const item = product.find((product) => product.id === id);
 
         cart.push({
             ...item,
-            
+            numberOfUnits: 1,
         });
       }
       updateCart();
@@ -62,15 +63,18 @@ function updateCart() {
 
 // calculate and render subtotal
 function renderTotal() {
-    let totalPrice = 0, totalItems = 0;
+    let totalPrice = 0; totalItems = 0;
 
     cart.forEach((item) => {
         totalPrice += item.price * item.numberOfUnits;
+        totalItems += item.numberOfUnits;
     });
 
     total.innerHTML = `
     Total: $${totalPrice.toFixed(2)}
+    (Items: ${totalItems})
     `
+    itemsInCart.innerHTML = `Cart (${totalItems})`;
 }
 
 // render cart items
@@ -78,19 +82,48 @@ function renderCartItems() {
     cartItems.innerHTML = "";
     cart.forEach((item) => {
         cartItems.innerHTML += `
-            <div class="cart-content">
+            <div class="cart-content" style="padding:1rem; display:inline;">
             <h4 class="cart-name" onclick="removeItemFromCart(${item.id})">
+            Item: 
             ${item.name}
             </h4>
             <h4 class="cart-price" onclick="removeItemFromCart(${item.id})">
+            Price: 
             ${item.price}
-            </h4>
-            <h4 class="remove-button">
-            <button id="removeButton" onclick="removeItemFromCart(${item.id})">Remove</button>
+            </h6>
+            <div class="quantity" style="display: inline-block">
+            Quantity
+            <button type="button" id="btn-plus" class="btn-sm btn-secondary" onclick="changeNumberOfUnits('plus', ${item.id})">+</div>
+            ${item.numberOfUnits}
+            <button type="button" id="btn-minus" class="btn-sm btn-secondary" onclick="changeNumberOfUnits('minus', ${item.id})">-</div>
+            </div>
+            <button type="button" class="remove-button btn-md btn-danger" id="removeButton" onclick="removeItemFromCart(${item.id})">Remove</button>
         </div>
             `;
     }
     );
+}
+
+// change number of units function
+function changeNumberOfUnits(action, id) {
+    cart = cart.map((item) => {
+
+        let numberOfUnits = item.numberOfUnits;
+
+        if(item.id === id) {
+            if(action === "minus") {
+                numberOfUnits--;
+            } else if(action === "plus") {
+                numberOfUnits++;
+            }
+        }
+        return {
+            ...item,
+            numberOfUnits,
+        };
+    });
+
+    updateCart();
 }
 
 // remove item from cart

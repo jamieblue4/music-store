@@ -17,7 +17,7 @@
     </header>
     <h1 class="text-center">Record Store</h1>
     <div class="text-center">
-    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#cartModal">Open Cart</button>
+    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#cartModal" id="yourCartButton">Cart (0)</button>
     </div>
 
     <div class="modal" id="cartModal" tabindex="-1" role="dialog" arialabelledby="Cart" aria-hidden="true">
@@ -48,8 +48,9 @@
     </div>
 
 <div class="container-fluid col-3">
-<div class="card mt-3" style="width: 400px;">
+<div class="card mt-3" style="width: 25rem;">
     <img class="shop-img" style="height:200px;width:auto;" id="bestseller-img-data" src="bestseller.jpeg" onclick="addToCart(0)">
+    <div class="best-seller-section" style="padding:1rem;">
     <h4 class="card-title" id="bestseller">Best Sellers</h4>
     <p class="shop-title">Biggest hits by popular artists.</p>
     <div class="shop-details">
@@ -59,22 +60,25 @@
     </div>
 </div>
 </div>
+</div>
 
-<div class="card mt-3" style="width: 400px;">
+<div class="card mt-3" style="width: 25rem;">
     <img class="shop-img" style="height:200px;width: auto;" id="on-sale-img" src="sale.jpeg" onclick="addToCart(1)">
+    <div class="on-sale-section" style="padding:1rem;">
     <h4 class="card-title" id="data-on-sale">On Sale</h4>
     <p class="shop-title">Currently on sale.</p>
     <div class="shop-details">
         <span class="shop-price" id="on-sale-price">$8.99</span>
             <div class="shop-buttons">
-                <button type="button" class="add-to-cart-button btn btn-secondary btn-sm" onclick="addToCart(1)">Add To Cart</button>
+                <button type="button" class="add-to-cart-button btn btn-secondary btn-sm mt-1" onclick="addToCart(1)">Add To Cart</button>
             </div>
+        </div>
         </div>
     </div>
 
-    <div class="card mt-3" style="width: 400px;">
+    <div class="card mt-3" style="width: 25rem;">
         <img class="shop-img" style="height:200px; width:auto;" id="new-arrival-img" src="record-wall.jpeg" onclick="addToCart(2)">
-        <div class="new-arrival-section" id="newarrival">
+        <div class="new-arrival-section" style="padding:1rem;" id="newarrival">
             <h4 class="card-title" id="data-new-arrival">New Arrival</h2>
             <p class="shop-title">Brand new, just in!</p>
                 <div class="shop-details">
