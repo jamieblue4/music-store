@@ -6,10 +6,21 @@ function handleSubmit(event) {
     const value = Object.fromEntries(data.entries());
 
     console.log({value});
+
+    fetch('https://reqres.in/api.users', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    }).then(res => res.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error))
 }
 
 const form = document.querySelector('form');
 form.addEventListener('submit', handleSubmit);
+
 
 // Modal / cart logic
 const modal = document.getElementById("cartModal");
