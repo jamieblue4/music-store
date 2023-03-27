@@ -7,15 +7,29 @@ function handleSubmit(event) {
 
     console.log({value});
 
-    fetch('https://reqres.in/api.users', {
+    fetch('https://reqres.in/api/users', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
-    }).then(res => res.json())
+    }).then(res => {
+        if (!res.ok) {
+            console.log("There's been a problem.");
+            return;
+        }
+        return res.json();
+    })
     .then(data => console.log(data))
     .catch(error => console.log(error))
+
+    fetch('https://reqres.in/api/users')
+    .then(results => results.json(data))
+    .then(function (data) {
+        document.getElementById('user-info').innerHTML(`
+        Welcome, ${value}!
+        `);
+    })
 }
 
 const form = document.querySelector('form');
