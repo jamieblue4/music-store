@@ -17,7 +17,9 @@
     </header>
     <h1 class="text-center">Record Store</h1>
     <div class="text-center">
-    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#cartModal" id="yourCartButton">Cart (0)</button>
+    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#cartModal" id="yourCartButton">
+        <div class="cart-counter">Cart (0)</div>
+    </button>
     </div>
 
     <div class="modal" id="cartModal" tabindex="-1" role="dialog" arialabelledby="Cart" aria-hidden="true">
@@ -39,7 +41,7 @@
             </div>
         </div>
     
-        <div class="modalFooter" id="cartButtons">
+        <div class="modalFooter" style="padding-bottom: 1em;" id="cartButtons">
             <button type="button mt-1" class="btn btn-success" id="checkoutButton">Checkout</button>
             <button type="button mt-1" class="btn btn-light" id="clearCartButton">Clear Cart</button>
             </div>

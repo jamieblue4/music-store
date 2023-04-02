@@ -1,45 +1,10 @@
-// Sign Up form
-function handleSubmit(event) {
-    event.preventDefault();
-
-    const data = new FormData(event.target);
-    const value = Object.fromEntries(data.entries());
-
-    console.log({value});
-
-    fetch('https://reqres.in/api/users', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    }).then(res => {
-        if (!res.ok) {
-            console.log("There's been a problem.");
-            return;
-        }
-        return res.json();
-    })
-    .then(data => console.log(data))
-    .catch(error => console.log(error))
-
-    fetch('https://reqres.in/api/users')
-    .then(results => results.json(data))
-    .then(function (data) {
-        document.getElementById('user-info').innerHTML(`
-        Welcome, ${value}!
-        `);
-    })
-}
-
-const form = document.querySelector('form');
-form.addEventListener('submit', handleSubmit);
-
-
 // Modal / cart logic
 const modal = document.getElementById("cartModal");
 
 var itemsInCart = document.getElementById("yourCartButton");
+var shop = document.querySelector('.shop-container');
+var cartItems = document.querySelector('.cart-container');
+var total = document.querySelector('.cart-total');
 
 window.onclick = function(event) {
     if (event.target == modal) {
@@ -48,10 +13,6 @@ window.onclick = function(event) {
 }
 
 //Add to cart Functions and Shop Section
-var shop = document.querySelector('.shop-container');
-var cartItems = document.querySelector('.cart-container');
-var total = document.querySelector('.cart-total');
-
 const product = [
     {
         id: 0,
@@ -131,11 +92,11 @@ function renderCartItems() {
             </h6>
             <div class="quantity" style="display: inline-block">
             Quantity
-            <button type="button" id="btn-plus" class="btn-sm btn-secondary" onclick="changeNumberOfUnits('plus', ${item.id})">+</div>
+            <button type="button" id="btn-plus" class="btn btn-sm" onclick="changeNumberOfUnits('plus', ${item.id})">+</button>
             ${item.numberOfUnits}
-            <button type="button" id="btn-minus" class="btn-sm btn-secondary" onclick="changeNumberOfUnits('minus', ${item.id})">-</div>
+            <button type="button" id="btn-minus" class="btn btn-sm" onclick="changeNumberOfUnits('minus', ${item.id})">-</button>
             </div>
-            <button type="button" class="remove-button btn-md btn-danger" id="removeButton" onclick="removeItemFromCart(${item.id})">Remove</button>
+            <button type="button" class="remove-button btn-md btn-danger" style="border-radius: 0.75em;" id="removeButton" onclick="removeItemFromCart(${item.id})">Remove</button>
         </div>
             `;
     }
@@ -189,3 +150,5 @@ checkoutButton.onclick = function clearCart() {
 
     updateCart();
 }
+
+// Sign Up form
