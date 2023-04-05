@@ -151,4 +151,4 @@ checkoutButton.onclick = function clearCart() {
     updateCart();
 }
 
-// Sign Up form
+// Sign Up Form
