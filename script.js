@@ -16,18 +16,18 @@ window.onclick = function(event) {
 const product = [
     {
         id: 0,
-        name: 'Best Seller',
-        price: 14.99,
+        name: 'Abbey Road',
+        price: 19.99,
     },
     {
         id: 1,
-        name: 'On Sale',
-        price: 8.99,
+        name: 'Currents',
+        price: 24.99,
     },
     {
         id: 2,
-        name: 'New Arrival',
-        price: 19.99,
+        name: 'Mr. Morale & the Big Steppers',
+        price: 29.99,
     }
 ];
 
