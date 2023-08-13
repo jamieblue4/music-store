@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark justify-content-center" style="width: 100%;">
+            <ul class="navbar-nav">
+                <li><a class="navbar-brand" href="/templates/index.html">Sky Blue Records</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="text-center">Record Store</h1>
+    <div class="text-center">
+    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#cartModal" id="yourCartButton">
+        <div class="cart-counter">Cart (0)</div>
+    </button>
+    </div>
+
+    <div class="modal" id="cartModal" tabindex="-1" role="dialog" arialabelledby="Cart" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content col text-center">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalTitle">Cart</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        
+        <div class="modal-body" id="cartContent">
+            <div class="cart-container">
+    
+            </div>
+            <div class="cart-total">
+    
+            </div>
+        </div>
+    
+        <div class="modalFooter" style="padding-bottom: 1em;" id="cartButtons">
+            <button type="button mt-1" class="btn btn-success" id="checkoutButton">Checkout</button>
+            <button type="button mt-1" class="btn btn-light" id="clearCartButton">Clear Cart</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+<div class="container-fluid" style="padding-top: 0.5em;">
+    <div class="row">
+
+<div class="col-sm-4 card">
+<div class="card">
+    <img class="shop-img" style="padding-top: 0.5em;" id="bestseller-img-data" src="beatles.jpg" onclick="addToCart(0)">
+    <div class="best-seller-section" style="padding:1rem;">
+    <h4 class="card-title" id="bestseller">Abbey Road</h4>
+    <p class="shop-title">The Beatles</p>
+    <div class="shop-details">
+        <span class="shop-price" id="bestseller-price">$19.99</span>
+    <div class="shop-buttons">
+        <button type="button" class="add-to-cart-button btn btn-secondary btn-sm" onclick="addToCart(0)">Add To Cart</button>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-sm-4 card">
+<div class="card">
+    <img class="shop-img" style="padding-top: 0.5em;" id="on-sale-img" src="tame_impala.jpg" onclick="addToCart(1)">
+    <div class="on-sale-section" style="padding:1rem;">
+    <h4 class="card-title" id="data-on-sale">Currents</h4>
+    <p class="shop-title">Tame Impala</p>
+    <div class="shop-details">
+        <span class="shop-price" id="on-sale-price">$24.99</span>
+            <div class="shop-buttons">
+                <button type="button" class="add-to-cart-button btn btn-secondary btn-sm mt-1" onclick="addToCart(1)">Add To Cart</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+    <div class="col-sm-4 card">
+    <div class="card">
+        <img class="shop-img" style="padding-top: 0.5em;" id="new-arrival-img" src="kendrick_lamar.jpg" onclick="addToCart(2)">
+        <div class="new-arrival-section" style="padding:1rem;" id="newarrival">
+            <h4 class="card-title" id="data-new-arrival">Mr. Morale & the Big Steppers</h2>
+            <p class="shop-title">Kendrick Lamar</p>
+                <div class="shop-details">
+                    <span class="shop-price" id="new-arrival-price">$29.99</span>
+                    <div class="shop-buttons">
+                        <button type="button" class="add-to-cart-button btn btn-secondary btn-sm" onclick="addToCart(2)">Add To Cart</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+
+
+   </div>
+</div>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+<script defer src="script.js"></script>
+</body>
+</html>
