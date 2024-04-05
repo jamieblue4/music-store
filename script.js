@@ -17,7 +17,7 @@ const product = [
     {
         id: 0,
         name: 'Abbey Road',
-        price: 19.99,
+        price: 34.99,
     },
     {
         id: 1,
@@ -28,6 +28,11 @@ const product = [
         id: 2,
         name: 'Mr. Morale & the Big Steppers',
         price: 29.99,
+    },
+    {
+        id: 3,
+        name: 'Infinity On High',
+        price: 19.99,
     }
 ];
 
@@ -83,11 +88,10 @@ function renderCartItems() {
         cartItems.innerHTML += `
             <div class="cart-content" style="padding:1rem; display:inline;">
             <h4 class="cart-name" onclick="removeItemFromCart(${item.id})">
-            Item: 
             ${item.name}
             </h4>
             <h4 class="cart-price" onclick="removeItemFromCart(${item.id})">
-            Price: 
+            $
             ${item.price}
             </h6>
             <div class="quantity" style="display: inline-block">
@@ -109,10 +113,19 @@ function changeNumberOfUnits(action, id) {
 
         let numberOfUnits = item.numberOfUnits;
 
-        if(item.id === id) {
-            if(action === "minus") {
-                numberOfUnits--;
-            } else if(action === "plus") {
+// prevents quanity from falling below zero        
+function decrementQuantity(numberOfUnits) {
+    
+    if(item.id === id) {
+        if(action === "minus") {
+            numberOfUnits--;
+        }
+        if (numberOfUnits > 0) {
+            numberOfUnits--;
+        }
+        return numberOfUnits;
+    }
+        else if(action === "plus") {
                 numberOfUnits++;
             }
         }
@@ -121,6 +134,7 @@ function changeNumberOfUnits(action, id) {
             numberOfUnits,
         };
     });
+
 
     updateCart();
 }
