@@ -6,20 +6,20 @@ Built a store website using HTML, JavaScript, and Bootstrap for cleaner styling 
 
 The project starts off with a basic homepage. I wanted to keep it simple. Images were stock photos and basic descriptors of the products.
 
-<img width="70%" alt="Screenshot 2023-03-01 at 12 09 27 AM" src="https://user-images.githubusercontent.com/110658282/222051296-b3acdf0d-eba3-49e2-9f2c-f2e780051a70.png">
+<img width="70%" alt="storefront" src="https://github.com/jamieblue4/music-store/assets/110658282/8aac0086-e741-4aea-af82-9f61f7f63468">
+.png">
 
-For the shop page I also wanted to keep it minimal. I like the look better, it's less distracting.
+And for the shop page, there's images of the products, and a counter at the top to show the user how many items are in their cart at any given time.
 
-<img width="50%" height="20%" alt="Screenshot 2023-03-01 at 12 16 54 AM" src="https://user-images.githubusercontent.com/110658282/222051636-5531e1dc-3268-4d55-a51f-32e9be0c27d6.png">
+<img width="50%" height="20%" alt="shop page" src="https://github.com/jamieblue4/music-store/assets/110658282/01e2d0b8-670e-4dbb-978d-78d24352198c">
 
-<img width="50%" height="20%" alt="Screenshot 2023-03-01 at 12 17 07 AM" src="https://user-images.githubusercontent.com/110658282/222051643-cb33408c-994c-4dfc-936a-289e3ca98228.png">
+For easier navigation, I included a drop down menu.
+<img width="187" alt="nav menu" src="https://github.com/jamieblue4/music-store/assets/110658282/ea50da26-f30d-4ef5-a780-5ae7d23e0576">
 
-The last part of the project is the cart functionality. Where the user can add items to cart and it keeps track of how many and of which items are added. All of this is stored in the browser's memory. I also included a feature that renders the item count in the cart button so the user knows how many items are in their shopping cart at any given time.
 
-<img width="617" alt="Screenshot 2023-03-01 at 12 23 52 AM" src="https://user-images.githubusercontent.com/110658282/222052528-de5e49c0-a617-4570-bcdb-f203c7d3fd0f.png">
+Aside from rendering the cart items in the cart button, there's a checkout feature, add/remove options, and the session refreshes upon "ordering". Ran into a bug during making this project that let quantity go into the negatives, but that's since been resolved and doesn't go below zero.
 
-<img width="650" alt="Screenshot 2023-03-01 at 12 24 16 AM" src="https://user-images.githubusercontent.com/110658282/222052535-f894fc2c-13c3-4a80-a452-08084bc2967f.png">
+<img width="80%" alt="cart" src="https://github.com/jamieblue4/music-store/assets/110658282/99d10090-b0e1-41f3-932b-2485a33318d5">
+
 
 I chose a modal component for the shopping cart because I like the separation it gives between the shop page and the user's cart. I also like how it can be in the background if the user needs to add more items or keep browsing.
-
-That's the full description for now. Next update will be making the modal look cleaner and less blocky. I also intend to add product images to the cart in a future update.
