@@ -16,6 +16,7 @@ And for the shop page, there's images of the products, and a counter at the top 
 <img width="50%" height="20%" alt="shop page" src="https://github.com/jamieblue4/music-store/assets/110658282/01e2d0b8-670e-4dbb-978d-78d24352198c">
 
 For easier navigation, I included a drop down menu.
+
 <img width="187" alt="nav menu" src="https://github.com/jamieblue4/music-store/assets/110658282/ea50da26-f30d-4ef5-a780-5ae7d23e0576">
 
 
