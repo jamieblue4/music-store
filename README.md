@@ -10,7 +10,6 @@ Built a store website using HTML, JavaScript, and Bootstrap for cleaner styling 
 The project starts off with a basic homepage. I wanted to keep it simple. Images were stock photos and basic descriptors of the products.
 
 <img width="70%" alt="storefront" src="https://github.com/jamieblue4/music-store/assets/110658282/8aac0086-e741-4aea-af82-9f61f7f63468">
-.png">
 
 And for the shop page, there's images of the products, and a counter at the top to show the user how many items are in their cart at any given time.
 
