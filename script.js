@@ -128,12 +128,9 @@ function changeNumberOfUnits(action, id) {
             if (numberOfUnits > 0) {
                 numberOfUnits--;
             }
-            if (numberOfUnits > 0) {
-                numberOfUnits--;
-            }
             return numberOfUnits;
-        } else if (action === "plus") {
-            numberOfUnits++;
+        } else if (item.id === 0) {
+            numberOfUnits === 0;
         }
         return {
             ...item,
