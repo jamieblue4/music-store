@@ -6,7 +6,7 @@ var shop = document.querySelector('.shop-container');
 var cartItems = document.querySelector('.cart-container');
 var total = document.querySelector('.cart-total');
 
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
@@ -43,7 +43,7 @@ updateCart();
 // Add to cart
 function addToCart(id) {
     // see if item is already in cart
-    if(cart.some((item) => item.id === id)){
+    if (cart.some((item) => item.id === id)) {
         changeNumberOfUnits("plus", id);
     } else {
         const item = product.find((product) => product.id === id);
@@ -52,10 +52,10 @@ function addToCart(id) {
             ...item,
             numberOfUnits: 1,
         });
-      }
-      updateCart();
     }
- 
+    updateCart();
+}
+
 // update cart
 function updateCart() {
     renderCartItems();
@@ -96,7 +96,7 @@ function renderCartItems() {
             </h6>
             <div class="quantity" style="display: inline-block">
             Quantity
-            <button type="button" id="btn-plus" class="btn btn-sm" onclick="changeNumberOfUnits('plus', ${item.id})">+</button>
+            <button type="button" id="btn-plus" class="btn btn-sm" onclick="changeNumberOfUnits('plus', ${item.id}">+</button>
             ${item.numberOfUnits}
             <button type="button" id="btn-minus" class="btn btn-sm" onclick="changeNumberOfUnits('minus', ${item.id})">-</button>
             </div>
@@ -106,35 +106,40 @@ function renderCartItems() {
     }
     );
 }
-
 // change number of units function
 function changeNumberOfUnits(action, id) {
     cart = cart.map((item) => {
 
         let numberOfUnits = item.numberOfUnits;
 
-// prevents quanity from falling below zero        
-function decrementQuantity(numberOfUnits) {
-    
-    if(item.id === id) {
-        if(action === "minus") {
+        let minus = document.querySelector('#btn-minus');
+        let plus = document.querySelector('#btn-plus');
+
+        minus.addEventListener('click', () => {
             numberOfUnits--;
-        }
-        if (numberOfUnits > 0) {
-            numberOfUnits--;
-        }
-        return numberOfUnits;
-    }
-        else if(action === "plus") {
-                numberOfUnits++;
+        });
+
+        plus.addEventListener('click', () => {
+            numberOfUnits++;
+        });
+
+        // prevents quanity from falling below zero        
+        if (item.id === id) {
+            if (numberOfUnits > 0) {
+                numberOfUnits--;
             }
+            if (numberOfUnits > 0) {
+                numberOfUnits--;
+            }
+            return numberOfUnits;
+        } else if (action === "plus") {
+            numberOfUnits++;
         }
         return {
             ...item,
             numberOfUnits,
         };
     });
-
 
     updateCart();
 }
@@ -152,7 +157,7 @@ let clearCart = document.getElementById('clearCartButton');
 
 clearCart.onclick = function clearCart() {
     cart.length = 0;
-    
+
     updateCart();
 }
 
