@@ -96,7 +96,7 @@ function renderCartItems() {
             </h6>
             <div class="quantity" style="display: inline-block">
             Quantity
-            <button type="button" id="btn-plus" class="btn btn-sm" onclick="changeNumberOfUnits('plus', ${item.id}">+</button>
+            <button type="button" class="btn btn-sm" id="btn-plus" onclick="changeNumberOfUnits('plus', ${item.id})">+</button>
             ${item.numberOfUnits}
             <button type="button" id="btn-minus" class="btn btn-sm" onclick="changeNumberOfUnits('minus', ${item.id})">-</button>
             </div>
@@ -109,28 +109,15 @@ function renderCartItems() {
 // change number of units function
 function changeNumberOfUnits(action, id) {
     cart = cart.map((item) => {
-
         let numberOfUnits = item.numberOfUnits;
-
-        let minus = document.querySelector('#btn-minus');
-        let plus = document.querySelector('#btn-plus');
-
-        minus.addEventListener('click', () => {
-            numberOfUnits--;
-        });
-
-        plus.addEventListener('click', () => {
-            numberOfUnits++;
-        });
 
         // prevents quanity from falling below zero        
         if (item.id === id) {
-            if (numberOfUnits > 0) {
+            if (action === "minus") {
                 numberOfUnits--;
             }
-            return numberOfUnits;
-        } else if (item.id === 0) {
-            numberOfUnits === 0;
+        } if (action === "plus") {
+            numberOfUnits++;
         }
         return {
             ...item,
