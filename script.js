@@ -117,8 +117,8 @@ function changeNumberOfUnits(action, id) {
                 numberOfUnits--;
             }
             // Prevent quantity from falling below zero.
-            if (numberOfUnits > 0) {
-                numberOfUnits--;
+            if (numberOfUnits == 1) {
+                numberOfUnits == 1;
             }
         } if (action === "plus") {
             numberOfUnits++;
