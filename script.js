@@ -107,13 +107,17 @@ function renderCartItems() {
     );
 }
 // change number of units function
+
 function changeNumberOfUnits(action, id) {
     cart = cart.map((item) => {
         let numberOfUnits = item.numberOfUnits;
 
-        // prevents quanity from falling below zero        
         if (item.id === id) {
             if (action === "minus") {
+                numberOfUnits--;
+            }
+            // Prevent quantity from falling below zero.
+            if (numberOfUnits > 0) {
                 numberOfUnits--;
             }
         } if (action === "plus") {
