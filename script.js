@@ -58,6 +58,7 @@ function addToCart(id) {
 
 // update cart
 function updateCart() {
+
     renderCartItems();
     renderTotal();
 
@@ -81,32 +82,12 @@ function renderTotal() {
     itemsInCart.innerHTML = `Cart (${totalItems})`;
 }
 
-// render cart items
-function renderCartItems() {
-    cartItems.innerHTML = "";
-    cart.forEach((item) => {
-        cartItems.innerHTML += `
-            <div class="cart-content" style="padding:1rem; display:inline;">
-            <h4 class="cart-name" onclick="removeItemFromCart(${item.id})">
-            ${item.name}
-            </h4>
-            <h4 class="cart-price" onclick="removeItemFromCart(${item.id})">
-            $
-            ${item.price}
-            </h6>
-            <div class="quantity" style="display: inline-block">
-            Quantity
-            <button type="button" class="btn btn-sm" id="btn-plus" onclick="changeNumberOfUnits('plus', ${item.id})">+</button>
-            ${item.numberOfUnits}
-            <button type="button" id="btn-minus" class="btn btn-sm" onclick="changeNumberOfUnits('minus', ${item.id})">-</button>
-            </div>
-            <button type="button" class="remove-button btn-md btn-danger" style="border-radius: 0.75em;" id="removeButton" onclick="removeItemFromCart(${item.id})">Remove</button>
-        </div>
-            `;
-    }
-    );
+
+// remove item from cart
+function removeItemFromCart(id) {
+    cart = cart.filter((item) => item.id !== id);
+    updateCart();
 }
-// change number of units function
 
 function changeNumberOfUnits(action, id) {
     cart = cart.map((item) => {
@@ -117,12 +98,13 @@ function changeNumberOfUnits(action, id) {
                 numberOfUnits--;
             }
             // Prevent quantity from falling below zero.
-            if (numberOfUnits == 1) {
-                numberOfUnits == 1;
+            if (numberOfUnits <= 0) {
+                numberOfUnits = 1;
             }
-        } if (action === "plus") {
-            numberOfUnits++;
-        }
+        } if (item.id === id)
+            if (action === "plus") {
+                numberOfUnits++;
+            }
         return {
             ...item,
             numberOfUnits,
@@ -132,30 +114,46 @@ function changeNumberOfUnits(action, id) {
     updateCart();
 }
 
-// remove item from cart
-function removeItemFromCart(id) {
-    cart = cart.filter((item) => item.id !== id);
+// render cart items
+function renderCartItems() {
+    cartItems.innerHTML = "";
+    cart.forEach((item) => {
+        cartItems.innerHTML += `
+            <div class="cart-content" style="padding:1rem; display:inline;">
+            <h4 class="cart-name">
+            ${item.name}
+            </h4>
+            <h4 class="cart-price">
+            $
+            ${item.price}
+            </h6>
+            <div class="quantity" style="display: inline-block">
+                <button type="button" class="btn btn-sm" onclick="changeNumberOfUnits('plus', ${item.id})">+</button>
+                    ${item.numberOfUnits}
+                <button type="button" class="btn btn-sm" onclick="changeNumberOfUnits('minus', ${item.id})">-</button>
+            </div>
+            <button type="button" class="remove-button btn-md btn-danger" style="border-radius: 0.75em;" onclick="removeItemFromCart(${item.id})">Remove</button>
+        </div>
+            `;
+    }
+    );
 
-    updateCart();
+    // clear cart contents
+
+    let clearCart = document.getElementById('clearCartButton');
+
+    clearCart.onclick = function clearCart() {
+        cart.length = 0;
+
+        updateCart();
+    }
+
+    let checkoutButton = document.getElementById('checkoutButton');
+
+    checkoutButton.onclick = function clearCart() {
+        cart.length = 0;
+        alert('Thank you for your purchase!');
+
+        updateCart();
+    }
 }
-
-// clear cart contents
-
-let clearCart = document.getElementById('clearCartButton');
-
-clearCart.onclick = function clearCart() {
-    cart.length = 0;
-
-    updateCart();
-}
-
-let checkoutButton = document.getElementById('checkoutButton');
-
-checkoutButton.onclick = function clearCart() {
-    cart.length = 0;
-    alert('Thank you for your purchase!');
-
-    updateCart();
-}
-
-// Sign Up Form
