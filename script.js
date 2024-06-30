@@ -18,21 +18,25 @@ const product = [
         id: 0,
         name: 'Abbey Road',
         price: 34.99,
+        image: "beatles.jpg",
     },
     {
         id: 1,
         name: 'Currents',
         price: 24.99,
+        image: "tame_impala.jpg",
     },
     {
         id: 2,
         name: 'Mr. Morale & the Big Steppers',
         price: 29.99,
+        image: "kendrick_lamar.jpg",
     },
     {
         id: 3,
         name: 'Infinity On High',
         price: 19.99,
+        image: "falloutboy.jpg",
     }
 ];
 
@@ -120,20 +124,24 @@ function renderCartItems() {
     cart.forEach((item) => {
         cartItems.innerHTML += `
             <div class="cart-content" style="padding:1rem; display:inline;">
-            <h4 class="cart-name">
+             <div style="display: grid;">
+            <img class="cart-image" src="${item.image}" width="100" height="100">
+            <div class="quantity" style="display: inline-block">
+                <button type="button" class="btn btn-sm" onclick="changeNumberOfUnits('plus', ${item.id})">+</button>
+                    ${item.numberOfUnits}
+                <button type="button" class="btn btn-sm" onclick="changeNumberOfUnits('minus', ${item.id})">-</button>
+            </div>
+            <button type="button" class="remove-button btn-md btn-danger" style="border-radius: 0.75em; width: 25%;" onclick="removeItemFromCart(${item.id})">Remove</button>
+        </div>
+           
+            <h4 class="cart-name" style="">
             ${item.name}
             </h4>
             <h4 class="cart-price">
             $
             ${item.price}
             </h6>
-            <div class="quantity" style="display: inline-block">
-                <button type="button" class="btn btn-sm" onclick="changeNumberOfUnits('plus', ${item.id})">+</button>
-                    ${item.numberOfUnits}
-                <button type="button" class="btn btn-sm" onclick="changeNumberOfUnits('minus', ${item.id})">-</button>
             </div>
-            <button type="button" class="remove-button btn-md btn-danger" style="border-radius: 0.75em;" onclick="removeItemFromCart(${item.id})">Remove</button>
-        </div>
             `;
     }
     );
