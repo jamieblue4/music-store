@@ -22,7 +22,6 @@ For easier navigation, I included a drop down menu.
 
 Aside from rendering the cart items in the cart button, there's a checkout feature, add/remove options, and the session refreshes upon "ordering". Ran into a bug during making this project that let quantity go into the negatives, but that's since been resolved and doesn't go below zero.
 
-<img width="80%" alt="cart" src="https://github.com/jamieblue4/music-store/assets/110658282/99d10090-b0e1-41f3-932b-2485a33318d5">
-
+<img width="80%" alt="Screenshot 2024-06-30 at 10 57 09 PM" src="https://github.com/jamieblue4/music-store/assets/110658282/b80a80df-3d38-422a-b36b-1c1ee8d94dd1">
 
 I chose a modal component for the shopping cart because I like the separation it gives between the shop page and the user's cart. I also like how it can be in the background if the user needs to add more items or keep browsing.
