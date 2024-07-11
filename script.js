@@ -124,21 +124,23 @@ function renderCartItems() {
     cart.forEach((item) => {
         cartItems.innerHTML += `
             <div class="cart-content" style="padding:1rem; display:inline;">
+            <h4 class="cart-name" style="padding-top: 0.25em;">
+                ${item.name}
+            </h4>
+        <div style="display: flex; justify-content: center;">
             <img class="cart-image" src="${item.image}" width="100" height="100" style="padding-right: 0.25em;">
             <div class="quantity" style="display: inline-block">
+            <h4 class="cart-price" style="padding-bottom: 0.25em;">
+            $
+            ${item.price}
+            </h4>
                 <button type="button" class="btn btn-sm" onclick="changeNumberOfUnits('plus', ${item.id})">+</button>
                     ${item.numberOfUnits}
                 <button type="button" class="btn btn-sm" onclick="changeNumberOfUnits('minus', ${item.id})">-</button>
                 <button type="button" class="remove-button btn-md btn-danger" style="border-radius: 0.3em; display: grid; background: red; color: white;" onclick="removeItemFromCart(${item.id})">Remove</button>
             </div>
-           
-            <h4 class="cart-name" style="padding-top: 0.25em;">
-            ${item.name}
-            </h4>
-            <h4 class="cart-price" style="padding-bottom: 0.25em;">
-            $
-            ${item.price}
-            </h6>
+        </div>
+            
             </div>
             `;
     }
